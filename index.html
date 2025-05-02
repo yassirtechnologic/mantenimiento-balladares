@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mantenimiento y Reparaciones Balladares</title>
+  <meta name="description" content="Soluciones rápidas y profesionales para el mantenimiento y reparación de tu hogar.">
+  <link rel="icon" href="./assets/images/logo-mario.jpg" type="image/jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+  <header>
+    <img src="./assets/images/logo-mario.jpg" alt="Logo Mantenimiento y Reparaciones Balladares" class="logo">
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre">Sobre mí</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#portafolio">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inicio" class="hero fade-in">
+    <div class="overlay">
+      <h1>Mantenimiento y Reparaciones Balladares</h1>
+      <p>Soluciones rápidas, eficientes y al gusto del cliente</p>
+    </div>
+  </section>
+
+  <section id="sobre" class="fade-in">
+    <h2>Sobre mí</h2>
+    <p>Mi nombre es Mario Balladares. Soy un profesional autónomo con más de 15 años de experiencia ayudando a familias con servicios de mantenimiento y reparaciones del hogar. Mi misión es ofrecer un servicio responsable, puntual y de calidad para que no tengas que preocuparte por nada.</p>
+  </section>
+
+  <section id="servicios" class="fade-in">
+    <h2>Servicios</h2>
+    <div class="service-cards">
+      <div class="card"><h3>Pintura</h3><p>Interior y exterior con acabados limpios y duraderos.</p></div>
+      <div class="card"><h3>Montaje y Desmontaje</h3><p>Muebles, cocinas, estanterías y más, con precisión.</p></div>
+      <div class="card"><h3>Pladur</h3><p>Tabiques, techos falsos y soluciones decorativas.</p></div>
+      <div class="card"><h3>Fontanería</h3><p>Reparación de fugas, grifería, sanitarios y más.</p></div>
+      <div class="card"><h3>Albañilería</h3><p>Pequeñas reformas, suelos, paredes y mantenimiento general.</p></div>
+    </div>
+  </section>
+
+  <section id="portafolio" class="fade-in">
+    <h2>Proyectos</h2>
+    <div class="portfolio-grid">
+      <div class="project-card">
+        <img src="assets/images/proyecto1.jpg" alt="Pintura en apartamento">
+        <h3>Pintura en apartamento</h3>
+        <p>Renovación completa con pintura blanca y detalles personalizados.</p>
+      </div>
+      <div class="project-card">
+        <img src="assets/images/proyecto2.jpg" alt="Montaje de cocina">
+        <h3>Montaje de muebles</h3>
+        <p>Instalación funcional y estética de todo tipo de muebles.</p>
+      </div>
+      <div class="project-card">
+        <img src="assets/images/proyecto3.jpg" alt="Trabajo de pladur">
+        <h3>Trabajo de pladur</h3>
+        <p>Creación de división con aislamiento y acabados finos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="fade-in">
+    <h2>Contacto</h2>
+    <p>¿Necesitas ayuda con un trabajo en casa? ¡Estoy para servirte!</p>
+    <ul class="contact-info">
+      <li>📞 <a href="tel:+34677114237">677 11 42 37</a></li>
+      <li>📧 <a href="mailto:mario85balladaresba@gmail.com">mario85balladaresba@gmail.com</a></li>
+    </ul>
+    <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu correo electrónico" required>
+      <textarea name="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
+      <button type="submit" class="btn">Enviar mensaje</button>
+    </form>
+  </section>
+
+  <div class="whatsapp-container">
+    <a href="https://wa.me/34677114237?text=Hola%2C%20necesito%20un%20servicio%20de%20mantenimiento" target="_blank" class="whatsapp-button">
+      <img src="assets/images/whatsapp-icon.png" alt="WhatsApp" width="22">
+      Chatea con Mario
+    </a>
+  </div>
+
+  <a href="#inicio" class="btn-top" title="Volver arriba">↑</a>
+
+  <footer>
+    <p>© 2025 Mantenimiento y Reparaciones Balladares. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.querySelector('nav');
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    faders.forEach(el => appearOnScroll.observe(el));
+  </script>
+
+</body>
+</html>
+
+
+
+
+
