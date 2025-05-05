@@ -77,11 +77,17 @@
       <li>📞 <a href="tel:+34677114237">677 11 42 37</a></li>
       <li>📧 <a href="mailto:mario85balladaresba@gmail.com">mario85balladaresba@gmail.com</a></li>
     </ul>
-    <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+    <form action="https://formsubmit.co/mario85balladaresba@gmail.com" method="POST">
       <input type="text" name="nombre" placeholder="Tu nombre" required>
       <input type="email" name="email" placeholder="Tu correo electrónico" required>
-      <textarea name="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
-      <button type="submit" class="btn">Enviar mensaje</button>
+      <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
+
+      <!-- Opcionales -->
+      <input type="hidden" name="_subject" value="Nuevo mensaje desde la web">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+
+      <button type="submit">Enviar mensaje</button>
     </form>
   </section>
 
