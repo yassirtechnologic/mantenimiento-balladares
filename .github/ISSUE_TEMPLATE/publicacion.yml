@@ -1,0 +1,25 @@
+name: Publicación
+description: Nueva publicación de proyecto para la web
+title: "Proyecto: <título>"
+labels: ["publicacion"]
+body:
+  - type: input
+    id: titulo
+    attributes:
+      label: Título del proyecto
+      placeholder: "Pintura salón, reforma baño..."
+    validations:
+      required: true
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: Descripción
+      placeholder: "Renovación completa con pintura lavable, reparación de fisuras..."
+    validations:
+      required: true
+  - type: textarea
+    id: imagenes
+    attributes:
+      label: Imágenes
+      description: "Arrastra fotos aquí (GitHub crea las URLs)."
+      placeholder: "![foto1](https://...)"
